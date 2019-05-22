@@ -12,6 +12,10 @@ public class DmlTask {
     public String myOrganizationName { get; private set; }
     public Date dateToday { get; private set; }
     public Integer availableSoqlCont { get; private set; }
+	
+    public static void methodB(){
+
+    }
 
     public DmlTask(){
         myFirstName = UserInfo.getFirstName();
