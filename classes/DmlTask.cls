@@ -28,6 +28,15 @@ public class DmlTask {
         availableSoqlCont = Limits.getLimitQueries();
     }
 
+	public static void methodA(String contactLastName) {
+        List<Contact> myList = new List<Contact>();
+        for (Integer i = 0; i < 5; i++) {
+            Contact contact = new Contact(LastName = contactLastName + i);
+            myList.add(contact);
+        }
+        insert myList;
+    }
+
     public static void addContacts(String contactLastName) {
         List<Contact> myList = new List<Contact>();
         for (Integer i = 0; i < 5; i++) {
